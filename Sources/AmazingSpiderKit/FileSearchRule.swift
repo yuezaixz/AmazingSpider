@@ -50,25 +50,25 @@ struct PlainStringSearchRule: RegPatternSearchRule {
 
 struct ObjCStringSearchRule: RegPatternSearchRule {
     let extensions: [String]
-    let patterns = ["@\"(*?)\"", "\"(*?)\""]
+    let patterns = ["@\"(.*?)\"", "\"(.*?)\""]
 }
 
 struct SwiftStringSearchRule: RegPatternSearchRule {
     let extensions: [String]
-    let patterns = ["\"(*?)\""]
+    let patterns = ["\"(.*?)\""]
 }
 
 struct XibStringSearchRule: RegPatternSearchRule {
     let extensions = [String]()
-    let patterns = ["title=\"(*?)\"", "text=\"(*?)\"", "placeholder=\"(.*?)\""]
+    let patterns = ["title=\"(.*?)\"", "text=\"(.*?)\"", "placeholder=\"(.*?)\""]
 }
 
 struct StringsStringSearchRule: RegPatternSearchRule {
     let extensions: [String]
-    let patterns = ["= \"(*?)\""]
+    let patterns = [".(.*?)\"= \"(.*?)\""]
 }
 
 struct StoryboardStringSearchRule: RegPatternSearchRule {
     let extensions: [String]
-    let patterns = ["<key>UIApplicationShortcutItemIconFile</key>[^<]*<string>(.*?)</string>"]
+    let patterns = ["title=\"(.*?)\"", "text=\"(.*?)\"", "placeholder=\"(.*?)\""]
 }

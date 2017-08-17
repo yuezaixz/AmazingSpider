@@ -27,7 +27,15 @@ public struct AmazionSpiderKit {
     }
     
     public func execute(){
-        for fileDict in self.allResourceFiles() {
+        let resourceFiles = self.allResourceFiles()
+        let localStrings = allUsedStringNames()
+        for localString in localStrings {
+            print(localString.lightGreen)
+        }
+    }
+    
+    func printResourceFiles(resourceFiles:[String: Set<String>]) {
+        for fileDict in resourceFiles {
             print(fileDict.key.green)
             for filePath in fileDict.value {
                 print(filePath.lightGreen)
@@ -59,6 +67,45 @@ public struct AmazionSpiderKit {
         return files
     }
     
+    func allUsedStringNames() -> Set<String> {
+        return usedStringNames(at: path)
+    }
+    
+    func usedStringNames(at path: Path) -> Set<String> {
+        guard let subPaths = try? path.children() else {
+            print("Failed to get contents in path: \(path)".red)
+            return []
+        }
+        
+        var result = [String]()
+        for subPath in subPaths {
+            if subPath.lastComponent.hasPrefix(".") {
+                continue
+            }
+            
+            if subPath.isDirectory {
+                if subPath.string.contains("zh-Hant.lproj") || subPath.string.contains("en.lproj") {
+                    continue
+                }
+                result.append(contentsOf: usedStringNames(at: subPath))
+            } else {
+                let fileExt = subPath.extension ?? ""
+                guard self.resourceExtensions.contains(fileExt) else {
+                    continue
+                }
+                
+                let fileType = FileType(ext: fileExt)
+                
+                let searchRules = fileType?.searchRules(extensions: resourceExtensions) ??
+                    [PlainStringSearchRule(extensions: resourceExtensions)]
+                
+                let content = (try? subPath.read()) ?? ""
+                result.append(contentsOf: searchRules.flatMap { $0.search(in: content) })
+            }
+        }
+        
+        return Set(result)
+    }
     
     
 }
