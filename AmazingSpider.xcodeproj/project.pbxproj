@@ -9,11 +9,11 @@
 /* Begin PBXAggregateTarget section */
 		"CommandLine::CommandLine::ProductTarget" /* CommandLine */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_157 /* Build configuration list for PBXAggregateTarget "CommandLine" */;
+			buildConfigurationList = OBJ_163 /* Build configuration list for PBXAggregateTarget "CommandLine" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_160 /* PBXTargetDependency */,
+				OBJ_166 /* PBXTargetDependency */,
 			);
 			name = CommandLine;
 			productName = CommandLine;
@@ -21,88 +21,118 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		OBJ_109 /* PathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* PathKit.swift */; };
-		OBJ_111 /* Spectre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Spectre::Spectre::Product" /* Spectre.framework */; };
-		OBJ_117 /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Case.swift */; };
-		OBJ_118 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Context.swift */; };
-		OBJ_119 /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* Expectation.swift */; };
-		OBJ_120 /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Failure.swift */; };
-		OBJ_121 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Global.swift */; };
-		OBJ_122 /* GlobalContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* GlobalContext.swift */; };
-		OBJ_123 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Reporter.swift */; };
-		OBJ_124 /* Reporters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Reporters.swift */; };
-		OBJ_130 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* BackgroundColor.swift */; };
-		OBJ_131 /* CodesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* CodesParser.swift */; };
-		OBJ_132 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* Color.swift */; };
-		OBJ_133 /* ControlCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* ControlCode.swift */; };
-		OBJ_134 /* ModesExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* ModesExtractor.swift */; };
-		OBJ_135 /* OutputTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* OutputTarget.swift */; };
-		OBJ_136 /* Rainbow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Rainbow.swift */; };
-		OBJ_137 /* String+Rainbow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* String+Rainbow.swift */; };
-		OBJ_138 /* StringGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* StringGenerator.swift */; };
-		OBJ_139 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Style.swift */; };
-		OBJ_140 /* XcodeColorsSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* XcodeColorsSupport.swift */; };
-		OBJ_146 /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* CommandLine.swift */; };
-		OBJ_147 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Option.swift */; };
-		OBJ_148 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* StringExtensions.swift */; };
-		OBJ_154 /* AmazingSpiderKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* AmazingSpiderKit.swift */; };
+		A664C73A1F45733300D1DC22 /* FileSearchRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664C7391F45733300D1DC22 /* FileSearchRule.swift */; };
+		A664C73D1F45741700D1DC22 /* Extensions+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664C73C1F45741700D1DC22 /* Extensions+String.swift */; };
+		A664C73F1F457B7A00D1DC22 /* Extensions+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664C73E1F457B7A00D1DC22 /* Extensions+Int.swift */; };
+		A664C7411F457DA800D1DC22 /* LocalFileFindProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664C7401F457DA800D1DC22 /* LocalFileFindProcess.swift */; };
+		A664C7431F4580A500D1DC22 /* Extensions+PathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664C7421F4580A500D1DC22 /* Extensions+PathKit.swift */; };
+		A664C7451F4580D600D1DC22 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664C7441F4580D600D1DC22 /* Models.swift */; };
+		OBJ_109 /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* CommandLine.swift */; };
+		OBJ_110 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Option.swift */; };
+		OBJ_111 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* StringExtensions.swift */; };
+		OBJ_117 /* AmazingSpiderKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* AmazingSpiderKit.swift */; };
+		OBJ_119 /* PathKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PathKit::PathKit::Product" /* PathKit.framework */; };
+		OBJ_120 /* Spectre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Spectre::Spectre::Product" /* Spectre.framework */; };
+		OBJ_121 /* Rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Rainbow::Rainbow::Product" /* Rainbow.framework */; };
+		OBJ_129 /* PathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* PathKit.swift */; };
+		OBJ_131 /* Spectre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Spectre::Spectre::Product" /* Spectre.framework */; };
+		OBJ_137 /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Case.swift */; };
+		OBJ_138 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Context.swift */; };
+		OBJ_139 /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* Expectation.swift */; };
+		OBJ_140 /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Failure.swift */; };
+		OBJ_141 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Global.swift */; };
+		OBJ_142 /* GlobalContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* GlobalContext.swift */; };
+		OBJ_143 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Reporter.swift */; };
+		OBJ_144 /* Reporters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Reporters.swift */; };
+		OBJ_150 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* BackgroundColor.swift */; };
+		OBJ_151 /* CodesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* CodesParser.swift */; };
+		OBJ_152 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* Color.swift */; };
+		OBJ_153 /* ControlCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* ControlCode.swift */; };
+		OBJ_154 /* ModesExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* ModesExtractor.swift */; };
+		OBJ_155 /* OutputTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* OutputTarget.swift */; };
+		OBJ_156 /* Rainbow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Rainbow.swift */; };
+		OBJ_157 /* String+Rainbow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* String+Rainbow.swift */; };
+		OBJ_158 /* StringGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* StringGenerator.swift */; };
+		OBJ_159 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Style.swift */; };
+		OBJ_160 /* XcodeColorsSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* XcodeColorsSupport.swift */; };
 		OBJ_58 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_64 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Package.swift */; };
 		OBJ_70 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Package.swift */; };
 		OBJ_76 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Package.swift */; };
 		OBJ_82 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* Package.swift */; };
 		OBJ_88 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* main.swift */; };
-		OBJ_90 /* PathKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PathKit::PathKit::Product" /* PathKit.framework */; };
-		OBJ_91 /* Spectre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Spectre::Spectre::Product" /* Spectre.framework */; };
-		OBJ_92 /* Rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Rainbow::Rainbow::Product" /* Rainbow.framework */; };
-		OBJ_93 /* CommandLineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CommandLine::CommandLineKit::Product" /* CommandLineKit.framework */; };
-		OBJ_94 /* AmazingSpiderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "AmazingSpider::AmazingSpiderKit::Product" /* AmazingSpiderKit.framework */; };
+		OBJ_90 /* CommandLineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CommandLine::CommandLineKit::Product" /* CommandLineKit.framework */; };
+		OBJ_91 /* AmazingSpiderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "AmazingSpider::AmazingSpiderKit::Product" /* AmazingSpiderKit.framework */; };
+		OBJ_92 /* PathKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PathKit::PathKit::Product" /* PathKit.framework */; };
+		OBJ_93 /* Spectre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Spectre::Spectre::Product" /* Spectre.framework */; };
+		OBJ_94 /* Rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Rainbow::Rainbow::Product" /* Rainbow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A61FA7A01F4495A600BC5BF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "PathKit::PathKit";
-			remoteInfo = PathKit;
-		};
-		A61FA7A11F4495A600BC5BF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Spectre::Spectre";
-			remoteInfo = Spectre;
-		};
-		A61FA7A21F4495A600BC5BF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Spectre::Spectre";
-			remoteInfo = Spectre;
-		};
-		A61FA7A31F4495A600BC5BF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Rainbow::Rainbow";
-			remoteInfo = Rainbow;
-		};
-		A61FA7A41F4495A600BC5BF8 /* PBXContainerItemProxy */ = {
+		A664C72F1F456EF400D1DC22 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "CommandLine::CommandLineKit";
 			remoteInfo = CommandLineKit;
 		};
-		A61FA7A51F4495A600BC5BF8 /* PBXContainerItemProxy */ = {
+		A664C7301F456EF400D1DC22 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "AmazingSpider::AmazingSpiderKit";
 			remoteInfo = AmazingSpiderKit;
 		};
-		A61FA7A61F4495A600BC5BF8 /* PBXContainerItemProxy */ = {
+		A664C7311F456EF400D1DC22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PathKit::PathKit";
+			remoteInfo = PathKit;
+		};
+		A664C7321F456EF400D1DC22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Spectre::Spectre";
+			remoteInfo = Spectre;
+		};
+		A664C7331F456EF400D1DC22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Spectre::Spectre";
+			remoteInfo = Spectre;
+		};
+		A664C7341F456EF400D1DC22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Rainbow::Rainbow";
+			remoteInfo = Rainbow;
+		};
+		A664C7351F456EF400D1DC22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PathKit::PathKit";
+			remoteInfo = PathKit;
+		};
+		A664C7361F456EF400D1DC22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Spectre::Spectre";
+			remoteInfo = Spectre;
+		};
+		A664C7371F456EF400D1DC22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Rainbow::Rainbow";
+			remoteInfo = Rainbow;
+		};
+		A664C7381F456EF400D1DC22 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -112,6 +142,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A664C7391F45733300D1DC22 /* FileSearchRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSearchRule.swift; sourceTree = "<group>"; };
+		A664C73C1F45741700D1DC22 /* Extensions+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Extensions+String.swift"; path = "Sources/AmazingSpiderKit/Extensions+String.swift"; sourceTree = SOURCE_ROOT; };
+		A664C73E1F457B7A00D1DC22 /* Extensions+Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Extensions+Int.swift"; path = "Sources/AmazingSpiderKit/Extensions+Int.swift"; sourceTree = SOURCE_ROOT; };
+		A664C7401F457DA800D1DC22 /* LocalFileFindProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileFindProcess.swift; sourceTree = "<group>"; };
+		A664C7421F4580A500D1DC22 /* Extensions+PathKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Extensions+PathKit.swift"; path = "Sources/AmazingSpiderKit/Extensions+PathKit.swift"; sourceTree = SOURCE_ROOT; };
+		A664C7441F4580D600D1DC22 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		"AmazingSpider::AmazingSpider::Product" /* AmazingSpider */ = {isa = PBXFileReference; lastKnownFileType = text; path = AmazingSpider; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AmazingSpider::AmazingSpiderKit::Product" /* AmazingSpiderKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AmazingSpiderKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CommandLine::CommandLineKit::Product" /* CommandLineKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommandLineKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,36 +187,39 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_110 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_111 /* Spectre.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_125 /* Frameworks */ = {
+		OBJ_112 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_141 /* Frameworks */ = {
+		OBJ_118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_119 /* PathKit.framework in Frameworks */,
+				OBJ_120 /* Spectre.framework in Frameworks */,
+				OBJ_121 /* Rainbow.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_130 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_131 /* Spectre.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_145 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_149 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_155 /* Frameworks */ = {
+		OBJ_161 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
@@ -191,17 +230,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_90 /* PathKit.framework in Frameworks */,
-				OBJ_91 /* Spectre.framework in Frameworks */,
-				OBJ_92 /* Rainbow.framework in Frameworks */,
-				OBJ_93 /* CommandLineKit.framework in Frameworks */,
-				OBJ_94 /* AmazingSpiderKit.framework in Frameworks */,
+				OBJ_90 /* CommandLineKit.framework in Frameworks */,
+				OBJ_91 /* AmazingSpiderKit.framework in Frameworks */,
+				OBJ_92 /* PathKit.framework in Frameworks */,
+				OBJ_93 /* Spectre.framework in Frameworks */,
+				OBJ_94 /* Rainbow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A664C73B1F45740100D1DC22 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A664C73C1F45741700D1DC22 /* Extensions+String.swift */,
+				A664C73E1F457B7A00D1DC22 /* Extensions+Int.swift */,
+				A664C7421F4580A500D1DC22 /* Extensions+PathKit.swift */,
+			);
+			path = Extensions;
+			sourceTree = SOURCE_ROOT;
+		};
 		OBJ_10 /* AmazingSpider */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,11 +349,11 @@
 			isa = PBXGroup;
 			children = (
 				"AmazingSpider::AmazingSpider::Product" /* AmazingSpider */,
+				"CommandLine::CommandLineKit::Product" /* CommandLineKit.framework */,
+				"AmazingSpider::AmazingSpiderKit::Product" /* AmazingSpiderKit.framework */,
 				"PathKit::PathKit::Product" /* PathKit.framework */,
 				"Spectre::Spectre::Product" /* Spectre.framework */,
 				"Rainbow::Rainbow::Product" /* Rainbow.framework */,
-				"CommandLine::CommandLineKit::Product" /* CommandLineKit.framework */,
-				"AmazingSpider::AmazingSpiderKit::Product" /* AmazingSpiderKit.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -333,7 +382,11 @@
 		OBJ_8 /* AmazingSpiderKit */ = {
 			isa = PBXGroup;
 			children = (
+				A664C73B1F45740100D1DC22 /* Extensions */,
 				OBJ_9 /* AmazingSpiderKit.swift */,
+				A664C7391F45733300D1DC22 /* FileSearchRule.swift */,
+				A664C7401F457DA800D1DC22 /* LocalFileFindProcess.swift */,
+				A664C7441F4580D600D1DC22 /* Models.swift */,
 			);
 			name = AmazingSpiderKit;
 			path = Sources/AmazingSpiderKit;
@@ -365,14 +418,17 @@
 		};
 		"AmazingSpider::AmazingSpiderKit" /* AmazingSpiderKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_150 /* Build configuration list for PBXNativeTarget "AmazingSpiderKit" */;
+			buildConfigurationList = OBJ_113 /* Build configuration list for PBXNativeTarget "AmazingSpiderKit" */;
 			buildPhases = (
-				OBJ_153 /* Sources */,
-				OBJ_155 /* Frameworks */,
+				OBJ_116 /* Sources */,
+				OBJ_118 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_122 /* PBXTargetDependency */,
+				OBJ_123 /* PBXTargetDependency */,
+				OBJ_124 /* PBXTargetDependency */,
 			);
 			name = AmazingSpiderKit;
 			productName = AmazingSpiderKit;
@@ -395,10 +451,10 @@
 		};
 		"CommandLine::CommandLineKit" /* CommandLineKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_142 /* Build configuration list for PBXNativeTarget "CommandLineKit" */;
+			buildConfigurationList = OBJ_105 /* Build configuration list for PBXNativeTarget "CommandLineKit" */;
 			buildPhases = (
-				OBJ_145 /* Sources */,
-				OBJ_149 /* Frameworks */,
+				OBJ_108 /* Sources */,
+				OBJ_112 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -425,15 +481,15 @@
 		};
 		"PathKit::PathKit" /* PathKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_105 /* Build configuration list for PBXNativeTarget "PathKit" */;
+			buildConfigurationList = OBJ_125 /* Build configuration list for PBXNativeTarget "PathKit" */;
 			buildPhases = (
-				OBJ_108 /* Sources */,
-				OBJ_110 /* Frameworks */,
+				OBJ_128 /* Sources */,
+				OBJ_130 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_112 /* PBXTargetDependency */,
+				OBJ_132 /* PBXTargetDependency */,
 			);
 			name = PathKit;
 			productName = PathKit;
@@ -456,10 +512,10 @@
 		};
 		"Rainbow::Rainbow" /* Rainbow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_126 /* Build configuration list for PBXNativeTarget "Rainbow" */;
+			buildConfigurationList = OBJ_146 /* Build configuration list for PBXNativeTarget "Rainbow" */;
 			buildPhases = (
-				OBJ_129 /* Sources */,
-				OBJ_141 /* Frameworks */,
+				OBJ_149 /* Sources */,
+				OBJ_161 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -486,10 +542,10 @@
 		};
 		"Spectre::Spectre" /* Spectre */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_113 /* Build configuration list for PBXNativeTarget "Spectre" */;
+			buildConfigurationList = OBJ_133 /* Build configuration list for PBXNativeTarget "Spectre" */;
 			buildPhases = (
-				OBJ_116 /* Sources */,
-				OBJ_125 /* Frameworks */,
+				OBJ_136 /* Sources */,
+				OBJ_145 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -540,11 +596,11 @@
 				"Rainbow::SwiftPMPackageDescription" /* RainbowPackageDescription */,
 				"CommandLine::SwiftPMPackageDescription" /* CommandLinePackageDescription */,
 				"AmazingSpider::AmazingSpider" /* AmazingSpider */,
+				"CommandLine::CommandLineKit" /* CommandLineKit */,
+				"AmazingSpider::AmazingSpiderKit" /* AmazingSpiderKit */,
 				"PathKit::PathKit" /* PathKit */,
 				"Spectre::Spectre" /* Spectre */,
 				"Rainbow::Rainbow" /* Rainbow */,
-				"CommandLine::CommandLineKit" /* CommandLineKit */,
-				"AmazingSpider::AmazingSpiderKit" /* AmazingSpiderKit */,
 				"CommandLine::CommandLine::ProductTarget" /* CommandLine */,
 			);
 		};
@@ -555,7 +611,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_109 /* PathKit.swift in Sources */,
+				OBJ_109 /* CommandLine.swift in Sources */,
+				OBJ_110 /* Option.swift in Sources */,
+				OBJ_111 /* StringExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,50 +621,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_117 /* Case.swift in Sources */,
-				OBJ_118 /* Context.swift in Sources */,
-				OBJ_119 /* Expectation.swift in Sources */,
-				OBJ_120 /* Failure.swift in Sources */,
-				OBJ_121 /* Global.swift in Sources */,
-				OBJ_122 /* GlobalContext.swift in Sources */,
-				OBJ_123 /* Reporter.swift in Sources */,
-				OBJ_124 /* Reporters.swift in Sources */,
+				OBJ_117 /* AmazingSpiderKit.swift in Sources */,
+				A664C7431F4580A500D1DC22 /* Extensions+PathKit.swift in Sources */,
+				A664C73F1F457B7A00D1DC22 /* Extensions+Int.swift in Sources */,
+				A664C7411F457DA800D1DC22 /* LocalFileFindProcess.swift in Sources */,
+				A664C73A1F45733300D1DC22 /* FileSearchRule.swift in Sources */,
+				A664C73D1F45741700D1DC22 /* Extensions+String.swift in Sources */,
+				A664C7451F4580D600D1DC22 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_129 /* Sources */ = {
+		OBJ_128 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_130 /* BackgroundColor.swift in Sources */,
-				OBJ_131 /* CodesParser.swift in Sources */,
-				OBJ_132 /* Color.swift in Sources */,
-				OBJ_133 /* ControlCode.swift in Sources */,
-				OBJ_134 /* ModesExtractor.swift in Sources */,
-				OBJ_135 /* OutputTarget.swift in Sources */,
-				OBJ_136 /* Rainbow.swift in Sources */,
-				OBJ_137 /* String+Rainbow.swift in Sources */,
-				OBJ_138 /* StringGenerator.swift in Sources */,
-				OBJ_139 /* Style.swift in Sources */,
-				OBJ_140 /* XcodeColorsSupport.swift in Sources */,
+				OBJ_129 /* PathKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_145 /* Sources */ = {
+		OBJ_136 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_146 /* CommandLine.swift in Sources */,
-				OBJ_147 /* Option.swift in Sources */,
-				OBJ_148 /* StringExtensions.swift in Sources */,
+				OBJ_137 /* Case.swift in Sources */,
+				OBJ_138 /* Context.swift in Sources */,
+				OBJ_139 /* Expectation.swift in Sources */,
+				OBJ_140 /* Failure.swift in Sources */,
+				OBJ_141 /* Global.swift in Sources */,
+				OBJ_142 /* GlobalContext.swift in Sources */,
+				OBJ_143 /* Reporter.swift in Sources */,
+				OBJ_144 /* Reporters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_153 /* Sources */ = {
+		OBJ_149 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_154 /* AmazingSpiderKit.swift in Sources */,
+				OBJ_150 /* BackgroundColor.swift in Sources */,
+				OBJ_151 /* CodesParser.swift in Sources */,
+				OBJ_152 /* Color.swift in Sources */,
+				OBJ_153 /* ControlCode.swift in Sources */,
+				OBJ_154 /* ModesExtractor.swift in Sources */,
+				OBJ_155 /* OutputTarget.swift in Sources */,
+				OBJ_156 /* Rainbow.swift in Sources */,
+				OBJ_157 /* String+Rainbow.swift in Sources */,
+				OBJ_158 /* StringGenerator.swift in Sources */,
+				OBJ_159 /* Style.swift in Sources */,
+				OBJ_160 /* XcodeColorsSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,38 +725,53 @@
 /* Begin PBXTargetDependency section */
 		OBJ_101 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "CommandLine::CommandLineKit" /* CommandLineKit */;
-			targetProxy = A61FA7A41F4495A600BC5BF8 /* PBXContainerItemProxy */;
+			target = "Spectre::Spectre" /* Spectre */;
+			targetProxy = A664C7361F456EF400D1DC22 /* PBXContainerItemProxy */;
 		};
 		OBJ_103 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "AmazingSpider::AmazingSpiderKit" /* AmazingSpiderKit */;
-			targetProxy = A61FA7A51F4495A600BC5BF8 /* PBXContainerItemProxy */;
+			target = "Rainbow::Rainbow" /* Rainbow */;
+			targetProxy = A664C7371F456EF400D1DC22 /* PBXContainerItemProxy */;
 		};
-		OBJ_112 /* PBXTargetDependency */ = {
+		OBJ_122 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PathKit::PathKit" /* PathKit */;
+			targetProxy = A664C7311F456EF400D1DC22 /* PBXContainerItemProxy */;
+		};
+		OBJ_123 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Spectre::Spectre" /* Spectre */;
-			targetProxy = A61FA7A11F4495A600BC5BF8 /* PBXContainerItemProxy */;
+			targetProxy = A664C7331F456EF400D1DC22 /* PBXContainerItemProxy */;
 		};
-		OBJ_160 /* PBXTargetDependency */ = {
+		OBJ_124 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Rainbow::Rainbow" /* Rainbow */;
+			targetProxy = A664C7341F456EF400D1DC22 /* PBXContainerItemProxy */;
+		};
+		OBJ_132 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Spectre::Spectre" /* Spectre */;
+			targetProxy = A664C7321F456EF400D1DC22 /* PBXContainerItemProxy */;
+		};
+		OBJ_166 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "CommandLine::CommandLineKit" /* CommandLineKit */;
-			targetProxy = A61FA7A61F4495A600BC5BF8 /* PBXContainerItemProxy */;
+			targetProxy = A664C7381F456EF400D1DC22 /* PBXContainerItemProxy */;
 		};
 		OBJ_95 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "PathKit::PathKit" /* PathKit */;
-			targetProxy = A61FA7A01F4495A600BC5BF8 /* PBXContainerItemProxy */;
+			target = "CommandLine::CommandLineKit" /* CommandLineKit */;
+			targetProxy = A664C72F1F456EF400D1DC22 /* PBXContainerItemProxy */;
 		};
 		OBJ_97 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "Spectre::Spectre" /* Spectre */;
-			targetProxy = A61FA7A21F4495A600BC5BF8 /* PBXContainerItemProxy */;
+			target = "AmazingSpider::AmazingSpiderKit" /* AmazingSpiderKit */;
+			targetProxy = A664C7301F456EF400D1DC22 /* PBXContainerItemProxy */;
 		};
 		OBJ_99 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "Rainbow::Rainbow" /* Rainbow */;
-			targetProxy = A61FA7A31F4495A600BC5BF8 /* PBXContainerItemProxy */;
+			target = "PathKit::PathKit" /* PathKit */;
+			targetProxy = A664C7351F456EF400D1DC22 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -708,16 +785,16 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = AmazingSpider.xcodeproj/PathKit_Info.plist;
+				INFOPLIST_FILE = AmazingSpider.xcodeproj/CommandLineKit_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = PathKit;
+				PRODUCT_BUNDLE_IDENTIFIER = CommandLineKit;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
-				TARGET_NAME = PathKit;
+				TARGET_NAME = CommandLineKit;
 			};
 			name = Debug;
 		};
@@ -730,6 +807,94 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = AmazingSpider.xcodeproj/CommandLineKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CommandLineKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = CommandLineKit;
+			};
+			name = Release;
+		};
+		OBJ_114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = AmazingSpider.xcodeproj/AmazingSpiderKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = AmazingSpiderKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = AmazingSpiderKit;
+			};
+			name = Debug;
+		};
+		OBJ_115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = AmazingSpider.xcodeproj/AmazingSpiderKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = AmazingSpiderKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = AmazingSpiderKit;
+			};
+			name = Release;
+		};
+		OBJ_126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = AmazingSpider.xcodeproj/PathKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PathKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = PathKit;
+			};
+			name = Debug;
+		};
+		OBJ_127 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AmazingSpider.xcodeproj/PathKit_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -743,7 +908,7 @@
 			};
 			name = Release;
 		};
-		OBJ_114 /* Debug */ = {
+		OBJ_134 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -765,7 +930,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_115 /* Release */ = {
+		OBJ_135 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -787,7 +952,7 @@
 			};
 			name = Release;
 		};
-		OBJ_127 /* Debug */ = {
+		OBJ_147 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -809,7 +974,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_128 /* Release */ = {
+		OBJ_148 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -831,101 +996,13 @@
 			};
 			name = Release;
 		};
-		OBJ_143 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = AmazingSpider.xcodeproj/CommandLineKit_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = CommandLineKit;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGET_NAME = CommandLineKit;
-			};
-			name = Debug;
-		};
-		OBJ_144 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = AmazingSpider.xcodeproj/CommandLineKit_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = CommandLineKit;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGET_NAME = CommandLineKit;
-			};
-			name = Release;
-		};
-		OBJ_151 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = AmazingSpider.xcodeproj/AmazingSpiderKit_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = AmazingSpiderKit;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = AmazingSpiderKit;
-			};
-			name = Debug;
-		};
-		OBJ_152 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = AmazingSpider.xcodeproj/AmazingSpiderKit_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = AmazingSpiderKit;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = AmazingSpiderKit;
-			};
-			name = Release;
-		};
-		OBJ_158 /* Debug */ = {
+		OBJ_164 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_159 /* Release */ = {
+		OBJ_165 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
@@ -1104,7 +1181,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_105 /* Build configuration list for PBXNativeTarget "PathKit" */ = {
+		OBJ_105 /* Build configuration list for PBXNativeTarget "CommandLineKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_106 /* Debug */,
@@ -1113,7 +1190,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_113 /* Build configuration list for PBXNativeTarget "Spectre" */ = {
+		OBJ_113 /* Build configuration list for PBXNativeTarget "AmazingSpiderKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_114 /* Debug */,
@@ -1122,38 +1199,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_126 /* Build configuration list for PBXNativeTarget "Rainbow" */ = {
+		OBJ_125 /* Build configuration list for PBXNativeTarget "PathKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_127 /* Debug */,
-				OBJ_128 /* Release */,
+				OBJ_126 /* Debug */,
+				OBJ_127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_142 /* Build configuration list for PBXNativeTarget "CommandLineKit" */ = {
+		OBJ_133 /* Build configuration list for PBXNativeTarget "Spectre" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_143 /* Debug */,
-				OBJ_144 /* Release */,
+				OBJ_134 /* Debug */,
+				OBJ_135 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_150 /* Build configuration list for PBXNativeTarget "AmazingSpiderKit" */ = {
+		OBJ_146 /* Build configuration list for PBXNativeTarget "Rainbow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_151 /* Debug */,
-				OBJ_152 /* Release */,
+				OBJ_147 /* Debug */,
+				OBJ_148 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_157 /* Build configuration list for PBXAggregateTarget "CommandLine" */ = {
+		OBJ_163 /* Build configuration list for PBXAggregateTarget "CommandLine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_158 /* Debug */,
-				OBJ_159 /* Release */,
+				OBJ_164 /* Debug */,
+				OBJ_165 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

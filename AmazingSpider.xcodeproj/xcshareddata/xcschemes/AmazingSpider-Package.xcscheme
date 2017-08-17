@@ -28,6 +28,34 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CommandLine::CommandLineKit"
+               BuildableName = "CommandLineKit.framework"
+               BlueprintName = "CommandLineKit"
+               ReferencedContainer = "container:AmazingSpider.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AmazingSpider::AmazingSpiderKit"
+               BuildableName = "AmazingSpiderKit.framework"
+               BlueprintName = "AmazingSpiderKit"
+               ReferencedContainer = "container:AmazingSpider.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "PathKit::PathKit"
                BuildableName = "PathKit.framework"
                BlueprintName = "PathKit"
@@ -59,34 +87,6 @@
                BlueprintIdentifier = "Rainbow::Rainbow"
                BuildableName = "Rainbow.framework"
                BlueprintName = "Rainbow"
-               ReferencedContainer = "container:AmazingSpider.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CommandLine::CommandLineKit"
-               BuildableName = "CommandLineKit.framework"
-               BlueprintName = "CommandLineKit"
-               ReferencedContainer = "container:AmazingSpider.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AmazingSpider::AmazingSpiderKit"
-               BuildableName = "AmazingSpiderKit.framework"
-               BlueprintName = "AmazingSpiderKit"
                ReferencedContainer = "container:AmazingSpider.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

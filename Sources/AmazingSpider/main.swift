@@ -4,14 +4,18 @@ import Rainbow
 import AmazingSpiderKit
 import PathKit
 
+let appVersion = "0.1.0"
+
 let cli = CommandLineKit.CommandLine()
 
 let help = BoolOption(shortFlag: "h", longFlag: "help",
                       helpMessage: "Prints a help message.")
 
-let excludePathsOption = MultiStringOption(shortFlag: "e", longFlag: "exclude", helpMessage: "Excluded paths which should run spider.")
+let pathsOption = StringOption(shortFlag: "p", longFlag: "path", helpMessage: "paths which should run spider.")
 
-cli.addOptions(excludePathsOption, help)
+let versionOption = BoolOption(shortFlag: "v", longFlag: "version", helpMessage: "Print version.")
+
+cli.addOptions(pathsOption, help, versionOption)
 
 cli.formatOutput = { s, type in
     var str: String
@@ -41,6 +45,32 @@ if help.value {
     exit(EX_OK)
 }
 
-let excludePaths = excludePathsOption.value ?? []
+if versionOption.value {
+    print(appVersion)
+    exit(EX_OK)
+}
 
-print(excludePaths)
+guard let path = pathsOption.value else {
+    exit(EX_OK)
+}
+
+print("Searching path:\(path)".blue)
+
+
+var kit = AmazionSpiderKit.init(path: path)
+kit.execute()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
