@@ -27,10 +27,13 @@ public struct AmazionSpiderKit {
     }
     
     public func execute(){
-        let resourceFiles = self.allResourceFiles()
-        let localStrings = allUsedStringNames()
-        for localString in localStrings {
-            print(localString.lightGreen)
+        //        let resourceFiles = self.allResourceFiles()
+        let localStringDict = allUsedStringNames()
+        for (localKey,localStrings) in localStringDict {
+            print(localKey.green)
+            for localString in localStrings {
+                print(localString.lightGreen)
+            }
         }
     }
     
@@ -67,17 +70,17 @@ public struct AmazionSpiderKit {
         return files
     }
     
-    func allUsedStringNames() -> Set<String> {
+    func allUsedStringNames() -> [String:Set<String>] {
         return usedStringNames(at: path)
     }
     
-    func usedStringNames(at path: Path) -> Set<String> {
+    func usedStringNames(at path: Path) -> [String:Set<String>] {
         guard let subPaths = try? path.children() else {
             print("Failed to get contents in path: \(path)".red)
-            return []
+            return [:]
         }
         
-        var result = [String]()
+        var result = [String:Set<String>]()
         for subPath in subPaths {
             if subPath.lastComponent.hasPrefix(".") {
                 continue
@@ -87,7 +90,7 @@ public struct AmazionSpiderKit {
                 if subPath.string.contains("zh-Hant.lproj") || subPath.string.contains("en.lproj") {
                     continue
                 }
-                result.append(contentsOf: usedStringNames(at: subPath))
+                result += usedStringNames(at: subPath)
             } else {
                 let fileExt = subPath.extension ?? ""
                 guard self.resourceExtensions.contains(fileExt) else {
@@ -100,11 +103,14 @@ public struct AmazionSpiderKit {
                     [PlainStringSearchRule(extensions: resourceExtensions)]
                 
                 let content = (try? subPath.read()) ?? ""
-                result.append(contentsOf: searchRules.flatMap { $0.search(in: content) })
+                let searchResult = Set.init(searchRules.flatMap { $0.search(in: content) })
+                if !searchResult.isEmpty {
+                    result[subPath.lastComponent] = searchResult
+                }
             }
         }
         
-        return Set(result)
+        return result
     }
     
     

@@ -27,6 +27,7 @@
 		A664C7411F457DA800D1DC22 /* LocalFileFindProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664C7401F457DA800D1DC22 /* LocalFileFindProcess.swift */; };
 		A664C7431F4580A500D1DC22 /* Extensions+PathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664C7421F4580A500D1DC22 /* Extensions+PathKit.swift */; };
 		A664C7451F4580D600D1DC22 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664C7441F4580D600D1DC22 /* Models.swift */; };
+		A664C7471F467CC400D1DC22 /* Extensions+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664C7461F467CC400D1DC22 /* Extensions+Dictionary.swift */; };
 		OBJ_109 /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* CommandLine.swift */; };
 		OBJ_110 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Option.swift */; };
 		OBJ_111 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* StringExtensions.swift */; };
@@ -148,6 +149,7 @@
 		A664C7401F457DA800D1DC22 /* LocalFileFindProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileFindProcess.swift; sourceTree = "<group>"; };
 		A664C7421F4580A500D1DC22 /* Extensions+PathKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Extensions+PathKit.swift"; path = "Sources/AmazingSpiderKit/Extensions+PathKit.swift"; sourceTree = SOURCE_ROOT; };
 		A664C7441F4580D600D1DC22 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A664C7461F467CC400D1DC22 /* Extensions+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Extensions+Dictionary.swift"; path = "Sources/AmazingSpiderKit/Extensions+Dictionary.swift"; sourceTree = SOURCE_ROOT; };
 		"AmazingSpider::AmazingSpider::Product" /* AmazingSpider */ = {isa = PBXFileReference; lastKnownFileType = text; path = AmazingSpider; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AmazingSpider::AmazingSpiderKit::Product" /* AmazingSpiderKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AmazingSpiderKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CommandLine::CommandLineKit::Product" /* CommandLineKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommandLineKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +249,7 @@
 				A664C73C1F45741700D1DC22 /* Extensions+String.swift */,
 				A664C73E1F457B7A00D1DC22 /* Extensions+Int.swift */,
 				A664C7421F4580A500D1DC22 /* Extensions+PathKit.swift */,
+				A664C7461F467CC400D1DC22 /* Extensions+Dictionary.swift */,
 			);
 			path = Extensions;
 			sourceTree = SOURCE_ROOT;
@@ -628,6 +631,7 @@
 				A664C73A1F45733300D1DC22 /* FileSearchRule.swift in Sources */,
 				A664C73D1F45741700D1DC22 /* Extensions+String.swift in Sources */,
 				A664C7451F4580D600D1DC22 /* Models.swift in Sources */,
+				A664C7471F467CC400D1DC22 /* Extensions+Dictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
