@@ -27,8 +27,14 @@ extension RegPatternSearchRule {
             
             let matches = reg.matches(in: content, options: [], range: content.fullRange)
             for checkingResult in matches {
-                let extracted = nsstring.substring(with: checkingResult.range(at: 1))
-                result.insert(extracted.plainFileName(extensions: extensions) )
+                if checkingResult.numberOfRanges == 2 {//xib中，找不到key
+                    let value = nsstring.substring(with: checkingResult.range(at: 1))
+                    result.insert(value)
+                } else if checkingResult.numberOfRanges == 3 {
+                    let key = nsstring.substring(with: checkingResult.range(at: 1))
+                    let value = nsstring.substring(with: checkingResult.range(at: 2))
+                    result.insert("\(key):\(value)")
+                }
             }
         }
         
@@ -50,7 +56,7 @@ struct PlainStringSearchRule: RegPatternSearchRule {
 
 struct ObjCStringSearchRule: RegPatternSearchRule {
     let extensions: [String]
-    let patterns = ["@\"(.*?)\"", "\"(.*?)\""]
+    let patterns = ["@\"(.*?)\""]
 }
 
 struct SwiftStringSearchRule: RegPatternSearchRule {
@@ -65,7 +71,7 @@ struct XibStringSearchRule: RegPatternSearchRule {
 
 struct StringsStringSearchRule: RegPatternSearchRule {
     let extensions: [String]
-    let patterns = [".(.*?)\"= \"(.*?)\""]
+    let patterns = [".(.*?)\" = \"(.*?)\""]
 }
 
 struct StoryboardStringSearchRule: RegPatternSearchRule {

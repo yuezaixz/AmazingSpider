@@ -12,7 +12,7 @@ let fileSizeSuffix = ["B", "KB", "MB", "GB"]
 
 enum FileType:String {
     case swift
-    case objc
+    case objc = "m"
     case xib
     case strings
     case storyboard

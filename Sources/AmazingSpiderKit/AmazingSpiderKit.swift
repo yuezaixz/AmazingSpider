@@ -12,11 +12,13 @@ import Rainbow
 public struct AmazionSpiderKit {
     let path: Path
     let resourceExtensions: [String]
+    let excludeDirectorys: [String]
     
     
-    public init(path: String) {
+    public init(path: String, excludeDirectorys: [String]) {
         let path = Path(path).absolute()
         self.path = path
+        self.excludeDirectorys = excludeDirectorys
         self.resourceExtensions = [
             FileType.xib.value(),
             FileType.strings.value(),
@@ -29,6 +31,17 @@ public struct AmazionSpiderKit {
     public func execute(){
         //        let resourceFiles = self.allResourceFiles()
         let localStringDict = allUsedStringNames()
+        printLocalStrings(localStringDict: localStringDict.filter({ (key, _ ) -> Bool in
+            return key.contains(FileType.strings.value())
+        }))
+        
+        print("\n\n\n\n\n\n\n\n\n\n----------------------------------------补充----------------------------------------".yellow)
+        printLocalStrings(localStringDict: localStringDict.filter({ (key, _ ) -> Bool in
+            return !key.contains(FileType.strings.value())
+        }))
+    }
+    
+    func printLocalStrings(localStringDict:[String : Set<String>]) {
         for (localKey,localStrings) in localStringDict {
             print(localKey.green)
             for localString in localStrings {
@@ -88,6 +101,9 @@ public struct AmazionSpiderKit {
             
             if subPath.isDirectory {
                 if subPath.string.contains("zh-Hant.lproj") || subPath.string.contains("en.lproj") {
+                    continue
+                }
+                if excludeDirectorys.contains(subPath.lastComponent) {
                     continue
                 }
                 result += usedStringNames(at: subPath)

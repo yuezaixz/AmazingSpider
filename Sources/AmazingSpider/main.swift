@@ -13,9 +13,11 @@ let help = BoolOption(shortFlag: "h", longFlag: "help",
 
 let pathsOption = StringOption(shortFlag: "p", longFlag: "path", helpMessage: "paths which should run spider.")
 
+let excludeDirectoryOption = MultiStringOption(shortFlag: "e", longFlag: "exclude", helpMessage: "Directorys which exclude.")
+
 let versionOption = BoolOption(shortFlag: "v", longFlag: "version", helpMessage: "Print version.")
 
-cli.addOptions(pathsOption, help, versionOption)
+cli.addOptions(pathsOption, help, versionOption, excludeDirectoryOption)
 
 cli.formatOutput = { s, type in
     var str: String
@@ -56,8 +58,9 @@ guard let path = pathsOption.value else {
 
 print("Searching path:\(path)".blue)
 
+let excludeDirectorys = excludeDirectoryOption.value ?? []
 
-var kit = AmazionSpiderKit.init(path: path)
+var kit = AmazionSpiderKit.init(path: path, excludeDirectorys:excludeDirectorys)
 kit.execute()
 
 
