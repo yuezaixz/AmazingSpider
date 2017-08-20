@@ -31,14 +31,51 @@ public struct AmazionSpiderKit {
     public func execute(){
         //        let resourceFiles = self.allResourceFiles()
         let localStringDict = allUsedStringNames()
-        printLocalStrings(localStringDict: localStringDict.filter({ (key, _ ) -> Bool in
-            return key.contains(FileType.strings.value())
-        }))
         
+        let localZhSimpleStringDict = localStringDict.filter({ (key, _ ) -> Bool in
+            return key.contains(FileType.strings.value())
+        })
+        
+        let localEnStringDict = allUsedEnStringNames().filter({ (key, _ ) -> Bool in
+            return key.contains(FileType.strings.value())
+        })
+        
+        let localZhTranditionStringDict = allUsedEnStringNames().filter({ (key, _ ) -> Bool in
+            return key.contains(FileType.strings.value())
+        })
+        
+        printAllResourceString(localZhSimpeStringDict: localZhSimpleStringDict,
+                               localZhTranditionStringDict: localZhTranditionStringDict,
+                               localEnStringDict: localEnStringDict
+        )
         print("\n\n\n\n\n\n\n\n\n\n----------------------------------------补充----------------------------------------".yellow)
         printLocalStrings(localStringDict: localStringDict.filter({ (key, _ ) -> Bool in
             return !key.contains(FileType.strings.value())
         }))
+        
+    }
+    
+    func handleClosure(_ initValue:[String:String],_ newItem:String) -> [String:String] {
+        var result = initValue
+        if newItem.contains(":") && newItem.split(separator: ":").count == 2 {
+            result[String(newItem.split(separator: ":")[0])] = String(newItem.split(separator: ":")[1])
+        }
+        return result
+    }
+    
+    func printAllResourceString(localZhSimpeStringDict:[String : Set<String>],
+                                localZhTranditionStringDict:[String : Set<String>],
+                                localEnStringDict:[String : Set<String>]) {
+        for (localKey,localZhStrings) in localZhSimpeStringDict {
+            let localZhtStrings = localZhTranditionStringDict[localKey]
+            let localEnStrings = localEnStringDict[localKey]
+            let localZhStringsDict = localZhStrings.reduce([String:String](), handleClosure)
+            let localEnStringsDict = localEnStrings?.reduce([String:String](), handleClosure) ?? [String:String]()
+            let localZhtStringsDict = localZhtStrings?.reduce([String:String](), handleClosure) ?? [String:String]()
+            for (k,v) in localZhStringsDict {
+                print("\(k):\(v):\(localZhtStringsDict[k] ?? "无"):\(localEnStringsDict[k] ?? "无")")
+            }
+        }
     }
     
     func printLocalStrings(localStringDict:[String : Set<String>]) {
@@ -84,10 +121,18 @@ public struct AmazionSpiderKit {
     }
     
     func allUsedStringNames() -> [String:Set<String>] {
-        return usedStringNames(at: path)
+        return usedStringNames(at: path, resourceType: .zh_Hans)
     }
     
-    func usedStringNames(at path: Path) -> [String:Set<String>] {
+    func allUsedEnStringNames() -> [String:Set<String>] {
+        return usedStringNames(at: path, resourceType: .en)
+    }
+    
+    func allUsedZhTraditionalStringNames() -> [String:Set<String>] {
+        return usedStringNames(at: path, resourceType: .zh_Hant)
+    }
+    
+    func usedStringNames(at path: Path ,resourceType:ResourceType) -> [String:Set<String>] {
         guard let subPaths = try? path.children() else {
             print("Failed to get contents in path: \(path)".red)
             return [:]
@@ -100,13 +145,16 @@ public struct AmazionSpiderKit {
             }
             
             if subPath.isDirectory {
-                if subPath.string.contains("zh-Hant.lproj") || subPath.string.contains("en.lproj") {
-                    continue
-                }
                 if excludeDirectorys.contains(subPath.lastComponent) {
                     continue
                 }
-                result += usedStringNames(at: subPath)
+                if subPath.string.hasSuffix(".lproj") &&
+                    subPath.string != "Base.lproj" &&
+                    !subPath.lastComponent.contains(resourceType.directoryName()) {
+                    //如果是本地化资源文件目录，那只查找当前语言的本地化资源目录
+                    continue
+                }
+                result += usedStringNames(at: subPath, resourceType: resourceType)
             } else {
                 let fileExt = subPath.extension ?? ""
                 guard self.resourceExtensions.contains(fileExt) else {

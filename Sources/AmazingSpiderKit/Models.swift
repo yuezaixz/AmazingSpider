@@ -63,3 +63,17 @@ public enum AmazionSpiderError: Error {
     case unknown
 }
 
+public enum ResourceType {
+    case zh_Hans
+    case zh_Hant
+    case en
+    
+    func directoryName() -> String {
+        switch self {
+        case .zh_Hans: return "zh-Hans"
+        case .zh_Hant: return "zh-Hant"
+        case .en: return "en"
+        }
+    }
+}
+
