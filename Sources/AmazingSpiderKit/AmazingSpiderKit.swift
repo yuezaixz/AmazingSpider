@@ -8,16 +8,19 @@
 import Foundation
 import PathKit
 import Rainbow
+import CSV
 
 public struct AmazionSpiderKit {
     let path: Path
+    let outputName: String
     let resourceExtensions: [String]
     let excludeDirectorys: [String]
     
     
-    public init(path: String, excludeDirectorys: [String]) {
+    public init(path: String, excludeDirectorys: [String], outputName: String) {
         let path = Path(path).absolute()
         self.path = path
+        self.outputName = outputName
         self.excludeDirectorys = excludeDirectorys
         self.resourceExtensions = [
             FileType.xib.value(),
@@ -29,6 +32,13 @@ public struct AmazionSpiderKit {
     }
     
     public func execute(){
+        let stream = OutputStream(toFileAtPath: "./\(outputName)", append: false)!
+        let csvWriter = try! CSVWriter.init(stream: stream, codecType: UTF8.self)
+        
+        //测试时候写到内存去
+//        let stream = OutputStream(toMemory: ())
+//        let csvWriter = try! CSVWriter(stream: stream)
+        
         //        let resourceFiles = self.allResourceFiles()
         let localStringDict = allUsedStringNames()
         
@@ -40,19 +50,26 @@ public struct AmazionSpiderKit {
             return key.contains(FileType.strings.value())
         })
         
-        let localZhTranditionStringDict = allUsedEnStringNames().filter({ (key, _ ) -> Bool in
+        let localZhTranditionStringDict = allUsedZhTraditionalStringNames().filter({ (key, _ ) -> Bool in
             return key.contains(FileType.strings.value())
         })
         
-        printAllResourceString(localZhSimpeStringDict: localZhSimpleStringDict,
+        exportAllResourceString(localZhSimpeStringDict: localZhSimpleStringDict,
                                localZhTranditionStringDict: localZhTranditionStringDict,
-                               localEnStringDict: localEnStringDict
+                               localEnStringDict: localEnStringDict,
+                               csvWriter: csvWriter
         )
-        print("\n\n\n\n\n\n\n\n\n\n----------------------------------------补充----------------------------------------".yellow)
-        printLocalStrings(localStringDict: localStringDict.filter({ (key, _ ) -> Bool in
-            return !key.contains(FileType.strings.value())
-        }))
         
+        for _ in 0...5 {
+            csvWriter.beginNewRow()
+        }
+        try! csvWriter.write(row: ["\n\n\n\n\n\n\n\n\n\n----------------------------------------补充----------------------------------------"])
+        
+        exportOtherLocalStrings(localStringDict: localStringDict.filter({ (key, _ ) -> Bool in
+            return !key.contains(FileType.strings.value())
+        }),csvWriter: csvWriter)
+        
+        csvWriter.stream.close()
     }
     
     func handleClosure(_ initValue:[String:String],_ newItem:String) -> [String:String] {
@@ -63,26 +80,34 @@ public struct AmazionSpiderKit {
         return result
     }
     
-    func printAllResourceString(localZhSimpeStringDict:[String : Set<String>],
+    func exportAllResourceString(localZhSimpeStringDict:[String : Set<String>],
                                 localZhTranditionStringDict:[String : Set<String>],
-                                localEnStringDict:[String : Set<String>]) {
+                                localEnStringDict:[String : Set<String>],
+                                csvWriter: CSVWriter) {
         for (localKey,localZhStrings) in localZhSimpeStringDict {
+            csvWriter.beginNewRow()
             let localZhtStrings = localZhTranditionStringDict[localKey]
             let localEnStrings = localEnStringDict[localKey]
             let localZhStringsDict = localZhStrings.reduce([String:String](), handleClosure)
             let localEnStringsDict = localEnStrings?.reduce([String:String](), handleClosure) ?? [String:String]()
             let localZhtStringsDict = localZhtStrings?.reduce([String:String](), handleClosure) ?? [String:String]()
             for (k,v) in localZhStringsDict {
-                print("\(k):\(v):\(localZhtStringsDict[k] ?? "无"):\(localEnStringsDict[k] ?? "无")")
+                try! csvWriter.write(row: [localKey,
+                                      k,
+                                      v,
+                                      (localZhtStringsDict[k] ?? "无"),
+                                      (localEnStringsDict[k] ?? "无")]
+                )
             }
         }
     }
     
-    func printLocalStrings(localStringDict:[String : Set<String>]) {
+    func exportOtherLocalStrings(localStringDict:[String : Set<String>],
+                           csvWriter: CSVWriter) {
         for (localKey,localStrings) in localStringDict {
-            print(localKey.green)
             for localString in localStrings {
-                print(localString.lightGreen)
+                try! csvWriter.write(row: [localKey,
+                                           localString])
             }
         }
     }

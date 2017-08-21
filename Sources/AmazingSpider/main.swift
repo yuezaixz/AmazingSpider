@@ -17,7 +17,9 @@ let excludeDirectoryOption = MultiStringOption(shortFlag: "e", longFlag: "exclud
 
 let versionOption = BoolOption(shortFlag: "v", longFlag: "version", helpMessage: "Print version.")
 
-cli.addOptions(pathsOption, help, versionOption, excludeDirectoryOption)
+let outputOption = StringOption(shortFlag: "o", longFlag: "output", helpMessage: "path which should save result.")
+
+cli.addOptions(pathsOption, help, versionOption, excludeDirectoryOption, outputOption)
 
 cli.formatOutput = { s, type in
     var str: String
@@ -59,8 +61,9 @@ guard let path = pathsOption.value else {
 print("Searching path:\(path)".blue)
 
 let excludeDirectorys = excludeDirectoryOption.value ?? []
+let outputName = outputOption.value ?? "local.csv"
 
-var kit = AmazionSpiderKit.init(path: path, excludeDirectorys:excludeDirectorys)
+var kit = AmazionSpiderKit.init(path: path, excludeDirectorys: excludeDirectorys, outputName: outputName)
 kit.execute()
 
 
