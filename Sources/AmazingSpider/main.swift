@@ -44,6 +44,12 @@ do {
     exit(EX_USAGE)
 }
 
+if !cli.unparsedArguments.isEmpty {
+    print("Unknow arguments: \(cli.unparsedArguments)".red)
+    cli.printUsage()
+    exit(EX_USAGE)
+}
+
 if help.value {
     cli.printUsage()
     exit(EX_OK)
@@ -55,6 +61,7 @@ if versionOption.value {
 }
 
 guard let path = pathsOption.value else {
+    cli.printUsage()
     exit(EX_OK)
 }
 
